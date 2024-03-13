@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Match Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Montserrat&display=swap" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="js/main.js"></script>
+
+</head>
+
+<body>
+      
+<div class="message" id="message">
+    <p>Welcome to Memory Match Game!</p>
+    <p>Try to match pairs of cards with identical pictures.</p>
+    <p>Click on two cards to flip them over.</p>
+    <p>Match all pairs to win!</p>
+</div>
+
+    <div class="game-container">
+        <div class="board" id="board">
+            <div class="card" data-id="image1">
+                <img class="front-face" src="images/image1.svg" alt="panda">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            <div class="card" data-id="image2">
+                <img class="front-face" src="images/image2.svg" alt="giraff">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            <div class="card" data-id="image3">
+                <img class="front-face" src="images/image3.svg" alt="elephant">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            <div class="card" data-id="image4">
+                <img class="front-face" src="images/image4.svg" alt="zebra">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            <div class="card" data-id="image2">
+                <img class="front-face" src="images/image5.svg" alt="panda">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            <div class="card" data-id="image3">
+                <img class="front-face" src="images/image6.svg" alt="giraff">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            <div class="card" data-id="image4">
+                <img class="front-face" src="images/image7.svg" alt="elephant">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            <div class="card" data-id="image5">
+                <img class="front-face" src="images/image8.svg" alt="zebra">
+                <img class="back-face" src="images/back.svg" alt="back-face">
+            </div>
+            
+            
+        </div>
+
+        <script src="js/game.js" type="module"></script>
+        <script src="js/card.js" type="module"></script>
+        <script src="js/main.js" type="module"></script>
+        <script>
+            // This is where you'll initialize the game and handle user interactions
+            const game = new Game(8, ['images/image1.svg', 'images/image2.svg', 'images/image3.svg', 'images/image4.svg', 'images/image5', 'images/image6', 'images/image7', 'images/image8']);
+            game.start();
+        </script>
+    </body>
+    
+    </html>
+
+        
+   
